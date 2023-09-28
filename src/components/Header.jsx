@@ -2,10 +2,9 @@ import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import { styled } from 'styled-components';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header `
   position: absolute;
   width: 100%;
-  z-index: 10;
   padding: 0 4vw;
   .header__container {
     max-width: 1417px;
@@ -17,10 +16,11 @@ const StyledHeader = styled.div`
       justify-content: space-between;
       svg {
         width: 30px;
-        fill: #ffff;
+        fill: #fff;
       }
     }
-    .header__hamburger {
+  }
+  .header__hamburger {
       cursor: pointer;
       display: block;
       span {
@@ -28,10 +28,9 @@ const StyledHeader = styled.div`
         width: 30px;
         margin: 6px;
         display: block;
-        background: #ffff;
+        background: #fff;
       }
     }
-  }
 `;
 
 export default function Header({ isMenuOpen, setIsMenuOpen }) {
@@ -45,18 +44,18 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
       .timeline({
         defaults: {
           duration: 0.3,
-          ease: "power2.out",
+          ease: 'power2.out',
         },
       })
       .fromTo(topRef.current, { y: 0 }, { y: 4.5 })
-      .fromTo(bottomRef.current, { y: 0 }, { y: -4.5 },0)
+      .fromTo(bottomRef.current, { y: 0 }, { y: -4.5 }, 0)
       .fromTo(topRef.current, { rotation: 0 }, { rotation: 135 }, 0)
       .fromTo(bottomRef.current, { rotation: 0 }, { rotation: 45 }, 0);
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     hamburgerTl.current.reversed(!isMenuOpen);
-  },[isMenuOpen])
+  }, [isMenuOpen]);
 
   return (
     <StyledHeader>
@@ -71,7 +70,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
           </svg>
           <div
             ref={hamburgerTl}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={()=>setIsMenuOpen(!isMenuOpen)}
             className="header__hamburger"
           >
             <span ref={topRef}></span>
