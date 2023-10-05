@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   }
   html, body {
-  //cursor: none;
+  cursor: none;
   }
   * {
   min-height: 0;

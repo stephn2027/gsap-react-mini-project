@@ -21,6 +21,7 @@ const StyledHeader = styled.header `
     }
   }
   .header__hamburger {
+    z-index: 10;
       cursor: pointer;
       display: block;
       span {
