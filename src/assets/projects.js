@@ -4,9 +4,9 @@ import image3 from '../images/mathilda-khoo-vLR0YP_otCo-unsplash.jpg';
 import image4 from '../images/sobhan-joodi-Ts4d8AvN7K8-unsplash.jpg';
 
  const projects = [
-    { id: "01", color: "#b5b5b2", image: image1, name: "Hansika" },
-  { id: "02", color: "#b3a8b3", image: image2, name: "Kalidas" },
-  { id: "03", color: "#a3b1ae", image: image3, name: "Muralidhar" },
-  { id: "04", color: "#b0aeac", image: image4, name: "Palash" },
+    { id: "01", color: "#b5b5b2", image: image1, name: "Home" },
+  { id: "02", color: "#b3a8b3", image: image2, name: "Portfolio" },
+  { id: "03", color: "#a3b1ae", image: image3, name: "Services" },
+  { id: "04", color: "#b0aeac", image: image4, name: "Contact" },
 ];
 export default projects;
