@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 const StyledCursor = styled.div`
     cursor: pointer;
-    height: 2.5rem;
-    width: 2.5rem;
-    position: absolute;
-    z-index: 10;
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    z-index: 99;
     top:0;
     left:0;
     will-change:transform;

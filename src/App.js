@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import Content from './components/Content';
 import ProjectIntro from './components/ProjectIntro';
 import Cursor from './components/Cursor';
+import Works from './components/Works';
 
 const StyledMainWrapper = styled.div`
   position: relative;
@@ -31,6 +32,7 @@ function App() {
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Content />
       <ProjectIntro />
+      <Works />
       <Menu isMenuOpen={isMenuOpen} />
     </StyledMainWrapper>
   );
