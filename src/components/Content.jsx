@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledContentSection = styled.section`
   position: relative;
-  padding: 20vh 4vw 10vh;
+  padding: 3vh 2vw 3vh;
   background-color: #e1dfdd;
   z-index: -1;
   .content__wrapper {
@@ -12,13 +12,13 @@ const StyledContentSection = styled.section`
     margin: 0 auto;
     .content__text--heading {
       font-family: 'Italiana', serif;
-      font-size: clamp(1rem, 5.25vw, 10rem);
+      font-size: clamp(1rem, 4.25vw, 8rem);
       line-height: 1;
       font-weight: 300;
       
     }
     .content__text--copy {
-      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-size: clamp(1rem, 2.4vw, 1.55rem);
       line-height: 1.3;
       font-weight: 300;
       width: 80%;

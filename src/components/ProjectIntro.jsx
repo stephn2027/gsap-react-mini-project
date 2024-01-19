@@ -8,13 +8,14 @@ import backgroundTwo from '../images/DSC02707.jpg';
 const StyledProject = styled.section`
   position: relative;
   display: grid;
+  padding-top: 20vh;
   grid-template-columns: 35% 15% 1fr;
   grid-template-areas:
     'project-img-left . project-title'
     'project-img-left project-img-right project-img-right';
   background-color: #e1dfdd;
   z-index: -4;
-  
+  padding-bottom:2rem;
 `;
 const ProjectIntro = () => {
   return (

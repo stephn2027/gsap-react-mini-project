@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import { styled } from 'styled-components';
 import Menu from './components/Menu';
-import Content from './components/Content';
-import ProjectIntro from './components/ProjectIntro';
 import Cursor from './components/Cursor';
+import Home from './components/Home';
+import SoloShots from './components/SoloShots';
 import Works from './components/Works';
+import Contact from './components/Contact';
 
 const StyledMainWrapper = styled.div`
   position: relative;
@@ -15,24 +17,30 @@ function App() {
   const circleRef = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(()=>{
-    
-    circleRef.current.moveTo(window.innerWidth/2, window.innerHeight/2)
-    const onMove = ({clientX,clientY})=>{
-      circleRef.current.moveTo(clientX,clientY)
-    }
-    window.addEventListener("pointermove",onMove)
-    return ()=>window.removeEventListener('pointermove', onMove);
-    
-  },[]);
+  useEffect(() => {
+    circleRef.current.moveTo(window.innerWidth / 2, window.innerHeight / 2);
+    const onMove = ({ clientX, clientY }) => {
+      circleRef.current.moveTo(clientX, clientY);
+    };
+    window.addEventListener('pointermove', onMove);
+    return () => window.removeEventListener('pointermove', onMove);
+  }, []);
 
   return (
     <StyledMainWrapper>
-      <Cursor ref={circleRef}/>
+      <Cursor ref={circleRef} />
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <Content />
-      <ProjectIntro />
-      <Works />
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="solo" element={<SoloShots />} />
+          <Route path="works" element={<Works />} />
+          <Route path="contact" element={<Contact />} />
+
+        </Routes>
+      </BrowserRouter>
+
       <Menu isMenuOpen={isMenuOpen} />
     </StyledMainWrapper>
   );

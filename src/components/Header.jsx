@@ -6,6 +6,8 @@ const StyledHeader = styled.header `
   position: absolute;
   width: 100%;
   padding: 0 4vw;
+  background-blend-mode: overlay;
+  
   .header__container {
     max-width: 1417px;
     margin: 0 auto;

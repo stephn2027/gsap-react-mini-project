@@ -10,8 +10,9 @@ const StyledProjectItem = styled.a`
   color: #fff;
   will-change: transform;
   text-decoration: none;
+  z-index: 3;
   &:hover {
-    z-index: 2;
+    z-index: 3;
   }
   .project__item-text {
     pointer-events: none;
@@ -51,6 +52,7 @@ export default function MenuItems({
   outerRef,
   backgroundRef,
   projectsRef,
+  link,
 }) {
   const wordRef = useRef();
   const wordRefClone = useRef();
@@ -170,8 +172,9 @@ export default function MenuItems({
   };
 
   return (
+   
     <StyledProjectItem
-      href=""
+      href={link}
       className="project__item"
       data-color={bgcolor}
       data-image={src}
@@ -179,6 +182,7 @@ export default function MenuItems({
       onMouseLeave={(event) => handleMouseLeave(event)}
       onMouseMove={handleMouseMove}
     >
+       
       <span className="project__item-text">
         <span className="word" ref={wordRef}>
           {name.split('').map((item, i) => {
@@ -207,6 +211,10 @@ export default function MenuItems({
           })}
         </span>
       </span>
+   
     </StyledProjectItem>
+
+   
+    
   );
 }

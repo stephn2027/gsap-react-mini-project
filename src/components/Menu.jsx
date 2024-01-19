@@ -26,7 +26,7 @@ const StyledProjectsContainer = styled.nav`
     opacity: 0;
     background-color: #000;
     top: 20vh;
-    z-index: 1;
+    z-index: 2;
     border-radius: 300px;
     .project__image--inner {
       position: absolute;
@@ -48,7 +48,7 @@ const StyledBackground = styled.aside`
   height: 100vh;
   will-change: background-color;
   background-color: #b5b5b2;
-  z-index: -1;
+  z-index: 1;
 `;
 
 
@@ -74,6 +74,7 @@ export default function Menu({isMenuOpen}) {
                 outerRef={outerRef}
                 backgroundRef={backgroundRef}
                 projectsRef={projectsRef}
+                link={project.link}
               />
             ))}
           </div>

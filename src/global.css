@@ -26,7 +26,7 @@
         position: relative;
         background-size: cover;
         background-position: 50% 50%;
-        margin-bottom: 20vh;
+        margin-bottom: 10vh;
       }
       .project__img--left {
         grid-area: project-img-left;
