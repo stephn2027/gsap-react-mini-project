@@ -14,7 +14,7 @@ export default function Services() {
         <header className="text-center mx-auto mb-12 lg:px-20">
 
           <p className="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
-            Save time managing advertising &amp; Content for your business.
+          Capture Moments, Create Memories: Unforgettable Photography Services Tailored Just for You! Discover our Picture-Perfect Packages at Prices as Captivating as Our Shots.
           </p>
         </header>
 

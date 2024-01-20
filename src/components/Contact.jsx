@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import SectionHeading from './SectionHeading';
+import { sendEmail } from '../actions/sendemail';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const [inputValue, setInputValue] = useState({
@@ -8,8 +10,8 @@ export default function Contact() {
     senderMessage: '',
   });
   return (
-    <section className='h-screen py-6 sm:py-8 lg:py-12 mt-10 md-5' id="contact">
-    <SectionHeading>Contact Us</SectionHeading>
+    <section className="h-screen py-6 sm:py-8 lg:py-12 mt-10 md-5" id="contact">
+      <SectionHeading>Contact Us</SectionHeading>
       <div
         className="min-h-screen bg-cover"
         style={{
@@ -33,22 +35,22 @@ export default function Contact() {
                   start capturing memories together!"
                 </p>
 
-
                 <div className="mt-6 md:mt-8">
                   <h3 className="text-gray-300 ">Follow us</h3>
 
                   <div className="flex mt-4 -mx-1.5 ">
                     <a
                       className="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
-                      href="#id"
+                      href="https://www.tiktok.com/@deopalculanphotography"
                     >
                       <svg
-                        className="w-10 h-10 fill-current"
-                        viewBox="0 0 24 24"
-                        fill="none"
+                        className="w-5 h-5 mt-1 transition-colors duration-300 transform hover:text-blue-500"
+                        viewBox="0 0 448 512"
+                        fill="white"
                         xmlns="http://www.w3.org/2000/svg"
+                        
                       >
-                        <path d="M18.6668 6.67334C18.0002 7.00001 17.3468 7.13268 16.6668 7.33334C15.9195 6.49001 14.8115 6.44334 13.7468 6.84201C12.6822 7.24068 11.9848 8.21534 12.0002 9.33334V10C9.83683 10.0553 7.91016 9.07001 6.66683 7.33334C6.66683 7.33334 3.87883 12.2887 9.3335 14.6667C8.0855 15.498 6.84083 16.0587 5.3335 16C7.53883 17.202 9.94216 17.6153 12.0228 17.0113C14.4095 16.318 16.3708 14.5293 17.1235 11.85C17.348 11.0351 17.4595 10.1932 17.4548 9.34801C17.4535 9.18201 18.4615 7.50001 18.6668 6.67268V6.67334Z" />
+                        <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
                       </svg>
                     </a>
 
@@ -79,7 +81,9 @@ export default function Contact() {
 
                     <a
                       className="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
-                      href="https://www.facebook.com/deopalculanphotography" target="_blank" rel="noreferrer"
+                      href="https://www.facebook.com/deopalculanphotography"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <svg
                         className="w-8 h-8"
@@ -124,7 +128,23 @@ export default function Contact() {
                     Ask us anything and we would love to hear from you
                   </p>
 
-                  <form className="mt-6">
+                  <form
+                    action={async (formData) => {
+                      const { data, error } = await sendEmail(formData);
+
+                      if (error) {
+                        toast.error(error);
+                        return;
+                      }
+                      toast.success('Email sent successfully!');
+                      setInputValue({
+                        senderMessage: '',
+                        senderEmail: '',
+                        senderName: '',
+                      });
+                    }}
+                    className="mt-6"
+                  >
                     <div className="flex-1">
                       <label className="block mb-2 text-sm text-gray-600 ">
                         Full Name
@@ -133,6 +153,15 @@ export default function Contact() {
                         type="text"
                         placeholder="Your Name"
                         className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                        name="senderName"
+                        maxLength={100}
+                        value={inputValue.senderName}
+                        onChange={(e) =>
+                          setInputValue({
+                            ...inputValue,
+                            senderName: e.target.value,
+                          })
+                        }
                       />
                     </div>
 
@@ -144,6 +173,16 @@ export default function Contact() {
                         type="email"
                         placeholder="youremail@example.com"
                         className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:text-gray-300 d focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                        name="senderName"
+                        maxLength={500}
+                        value={inputValue.senderEmail}
+                        onChange={(e) =>
+                          setInputValue({
+                            ...inputValue,
+                            senderEmail: e.target.value,
+                          })
+                        }
+                        required
                       />
                     </div>
 
@@ -154,6 +193,16 @@ export default function Contact() {
                       <textarea
                         className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                         placeholder="Message"
+                        name="senderMessage"
+                        maxLength={5000}
+                        value={inputValue.senderMessage}
+                        onChange={(e) =>
+                          setInputValue({
+                            ...inputValue,
+                            senderMessage: e.target.value,
+                          })
+                        }
+                        required
                       ></textarea>
                     </div>
 

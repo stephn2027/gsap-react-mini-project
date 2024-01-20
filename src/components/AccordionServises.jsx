@@ -12,7 +12,7 @@ export default function AccordionServices({text}) {
   return (
     <>
       <div id="accordionExample">
-      <div className="rounded-b-lg border border-t-0 border-neutral-200  dark:border-neutral-600 ">
+      <div className="rounded-b-lg border-t-0 border-neutral-200  dark:border-neutral-600 ">
         <h2 className="accordion-header mb-0" id="headingThree">
           <button
             className={`${
