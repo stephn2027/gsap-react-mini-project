@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import backgroundOne from '../images/pine-watt-2Hzmz15wGik-unsplash.jpg';
 import backgroundTwo from '../images/DSC02707.jpg';
-
+import {motion} from 'framer-motion';
 
 
 const StyledProject = styled.section`
@@ -19,19 +19,32 @@ const StyledProject = styled.section`
 `;
 const ProjectIntro = () => {
   return (
-    <StyledProject>
-      <h2 className="project__title">
+    <StyledProject 
+      
+    >
+      <motion.h2 className="project__title"
+      initial={{x:100,opacity:0.7}}
+      animate={{x:0, opacity:1}}
+      transition={{ease:'linear', delay:0.2}}
+      >
+      
         <span className="project__title--main">Deo Palculan</span>
         <span className="project__title--sub">Photography</span>
-      </h2>
-      <div
+      </motion.h2>
+      <motion.div
         className="project__img project__img--left"
         style={{ backgroundImage: `url(${backgroundOne})` }}
-      ></div>
-      <div
+        initial={{x:-200,opacity:0.7}}
+        animate={{x:0,opacity:1}}
+        transition={{ease:'easeIn',delay:0.2}}
+      ></motion.div>
+      <motion.div
         className="project__img project__img--right"
         style={{ backgroundImage: `url(${backgroundTwo})` }}
-      ></div>
+        initial={{x:200,opacity:0.7}}
+      animate={{x:0, opacity:1}}
+      transition={{ease:'linear', delay:0.2}}
+      ></motion.div>
       
     </StyledProject>
   );

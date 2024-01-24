@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
 
 const StyledContentSection = styled.section`
   position: relative;
@@ -31,7 +32,11 @@ const StyledContentSection = styled.section`
 const Content = () => {
   return (
     <StyledContentSection>
-      <div className="content__wrapper">
+      <motion.div className="content__wrapper"
+       initial={{ y:200 ,opacity: 0 }}
+      whileInView={{ y:0,opacity: 1 }}
+      transition={{ ease:'easeInOut',duration: 1 }}
+      >
         <p className="content__text--heading">
           Welcome to our photography page, where we invite you to explore a
           visual journey capturing the essence of moments frozen in time.
@@ -55,7 +60,7 @@ const Content = () => {
           and space. Welcome to a gallery of moments – a sanctuary for those who
           find solace, joy, and inspiration in the art of photography.
         </p>
-      </div>
+      </motion.div>
     </StyledContentSection>
   );
 };

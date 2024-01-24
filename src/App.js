@@ -5,9 +5,9 @@ import { styled } from 'styled-components';
 import Menu from './components/Menu';
 import Cursor from './components/Cursor';
 import Home from './components/Home';
-import SoloShots from './components/SoloShots';
 import Works from './components/Works';
 import Contact from './components/Contact';
+import TokyoPortraits from './components/TokyoPortraits';
 
 const StyledMainWrapper = styled.div`
   position: relative;
@@ -34,7 +34,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="solo" element={<SoloShots />} />
+          <Route path="solo" element={<TokyoPortraits />} />
           <Route path="works" element={<Works />} />
           <Route path="contact" element={<Contact />} />
 

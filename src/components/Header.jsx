@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import { styled } from 'styled-components';
-import DpLogo from '../images/DP Logo.png'
+import DpLogo from '../images/logo3.png'
 const StyledHeader = styled.header `
   position: absolute;
   width: 100%;
