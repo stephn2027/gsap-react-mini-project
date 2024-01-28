@@ -1,15 +1,14 @@
-import React from 'react'
-import GalleryViewer from './GalleryViewer'
-import SectionHeading from './SectionHeading'
-import { portraits } from '../assets/works'
+import React from 'react';
 
+import SectionHeading from './SectionHeading';
+import { portraits } from '../assets/works';
+import GalleryViewer from './GalleryViewer';
 
 export default function TokyoPortraits() {
   return (
-    <section className=''>
-        <SectionHeading>Portraits</SectionHeading>
-        <GalleryViewer photos={portraits}></GalleryViewer>
+    <section className="h-screen py-6 sm:py-8 lg:py-12 mt-10">
+      <SectionHeading>Portraits</SectionHeading>
+     <GalleryViewer images={portraits}/>
     </section>
-    
-  )
+  );
 }
