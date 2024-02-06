@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Works from './components/Works';
 import Contact from './components/Contact';
 import TokyoPortraits from './components/TokyoPortraits';
+import CoupleShots from './components/CoupleShots';
+import RandomShots from './components/RandomShots';
 
 const StyledMainWrapper = styled.div`
   position: relative;
@@ -34,7 +36,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="solo" element={<TokyoPortraits />} />
+          <Route path="portraits" element={<TokyoPortraits />} />
+          <Route path="couples" element={<CoupleShots />} />
+          <Route path="random" element={<RandomShots />} />
           <Route path="works" element={<Works />} />
           <Route path="contact" element={<Contact />} />
 

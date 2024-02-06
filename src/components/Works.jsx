@@ -23,12 +23,12 @@ export default function Works() {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.1 }}
-            href="solo"
+            href="portraits"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
             <img
               src={soloImage}
-              alt="solo shots"
+              alt="portraits"
               className="absolute inset-0 h-full
              w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
@@ -43,7 +43,7 @@ export default function Works() {
           initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.2 }}
-            href="#id"
+            href="groupshots"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
             <img
@@ -56,14 +56,14 @@ export default function Works() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
             <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              Couples
+              Group Shots
             </span>
           </motion.a>
           <motion.a
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.3 }}
-            href="#id"
+            href="couples"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
             <img
@@ -76,7 +76,7 @@ export default function Works() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
             <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              Elopements and Weddings
+              Couples 
             </span>
           </motion.a>
 
@@ -84,7 +84,7 @@ export default function Works() {
           initial={{ y: 100, opacity: 0,}}
             whileInView={{ y: 0, opacity: 1, }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.4 }}
-            href="#id"
+            href="random"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
             <img
@@ -97,7 +97,7 @@ export default function Works() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
             <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              Personal Branding
+              Nature and Random Shots
             </span>
           </motion.a>
         </div>
