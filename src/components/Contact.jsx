@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import SectionHeading from './SectionHeading';
-import { sendEmail } from '../actions/sendemail';
+import { sendEmail } from '../actions/sendEmailJS';
 import toast from 'react-hot-toast';
 import { FaTiktok, FaFacebookF } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -11,16 +11,21 @@ export default function Contact() {
     senderEmail: '',
     senderMessage: '',
   });
+
+  const form = useRef();
   return (
     <motion.section
       initial={{ x: 200, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 1.5 }}
       viewport={{ once: false }}
-      className="h-screen py-6 sm:py-8 lg:py-12 mt-10 md-5"
-      id="contact"
+      className="h-screen py-6 sm:py-8 lg:py-12 md-5 "
+      id="#contact"
     >
-      <SectionHeading>Contact Us</SectionHeading>
+       <div className='mt-20 pb-4'>
+       <SectionHeading>Contact Us</SectionHeading>
+       </div>
+     
       <motion.div
        initial={{ x: -300, opacity: 0.8 }}
       whileInView={{ x: 0, opacity: 1 }}
@@ -87,15 +92,13 @@ export default function Contact() {
                   </p>
 
                   <form
+                    ref={form}
                     className="mt-6"
-                    action={async (formData) => {
-                      console.log(formData);
-                      const { data, error } = await sendEmail(formData);
+                    onSubmit={ () => {
+                     
+                        sendEmail(form);
 
-                      if (error) {
-                        toast.error(error);
-                        return;
-                      }
+                      
                       toast.success('Email sent successfully!');
                       setInputValue({
                         senderMessage: '',

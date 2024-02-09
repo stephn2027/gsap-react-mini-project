@@ -1,9 +1,9 @@
 import React from 'react';
 import SectionHeading from './SectionHeading';
-import soloImage from '../images/DSC02686.jpg';
-import groupImage from '../images/DSC04219 copy.jpg';
-import sampleImage from '../images/DSC02745 copy.jpg';
-import sampleImage2 from '../images/DSC02707.jpg';
+import portraitImage from '../images/DSC02889.jpg';
+import groupImage from '../images/DSC04215.jpg';
+import coupleImage from '../images/DSC08717.jpg';
+import randomImage from '../images/DSC09747.jpg';
 import { motion } from 'framer-motion';
 
 export default function Works() {
@@ -27,7 +27,7 @@ export default function Works() {
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
             <img
-              src={soloImage}
+              src={portraitImage}
               alt="portraits"
               className="absolute inset-0 h-full
              w-full object-cover object-center transition duration-200 group-hover:scale-110"
@@ -63,11 +63,11 @@ export default function Works() {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.3 }}
-            href="couples"
+            href="random"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
             <img
-              src={sampleImage}
+              src={randomImage}
               loading="lazy"
               alt="by Deo P"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
@@ -76,7 +76,7 @@ export default function Works() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
             <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              Couples 
+              Nature and City Shots
             </span>
           </motion.a>
 
@@ -84,20 +84,20 @@ export default function Works() {
           initial={{ y: 100, opacity: 0,}}
             whileInView={{ y: 0, opacity: 1, }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.4 }}
-            href="random"
+            href="couples"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
             <img
-              src={sampleImage2}
+              src={coupleImage}
               loading="lazy"
-              alt="by Lorenzo Herrera"
+              alt="by Deo P."
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
             <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-              Nature and Random Shots
+              Couples
             </span>
           </motion.a>
         </div>

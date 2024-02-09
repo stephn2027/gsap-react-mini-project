@@ -12,9 +12,12 @@ export default function Services() {
       transition={{ ease: 'easeInOut', duration: 0.5 }}
       viewport={{once:false}}
       id="services"
-      className="section relative mt-[10vh] pb-8 md:pt-16 md:pb-0 "
+      className="h-full py-6 sm:py-8 lg:py-12"
     >
-    <SectionHeading>Services</SectionHeading>
+     <div className='mt-20'>
+     <SectionHeading>Services</SectionHeading>
+     </div>
+    
       <div className="container xl:max-w-6xl mx-auto px-4">
         <header className="text-center mx-auto mb-12 lg:px-20">
 
@@ -30,7 +33,7 @@ export default function Services() {
       whileInView={{ y: 0, opacity: 1,scale:1 }}
       transition={{ ease: 'easeInOut', duration: 0.5 }}
       viewport={{once:false}}
-        className="flex flex-wrap flex-row -mx-4 text-center">
+        className="flex flex-wrap flex-row -mx-4 text-center mb-2">
         {services.map((service)=><CardService serviceName={service.name} servicePrice={service.price} img={service.img} serviceText={service.text} />)}
           
         </motion.div>

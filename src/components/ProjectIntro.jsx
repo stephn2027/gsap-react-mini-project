@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import backgroundOne from '../images/pine-watt-2Hzmz15wGik-unsplash.jpg';
-import backgroundTwo from '../images/DSC02707.jpg';
+import backgroundOne from '../images/intro1.jpg';
+import backgroundTwo from '../images/intro2.jpg';
 import {motion} from 'framer-motion';
 
 

@@ -7,12 +7,17 @@ import Works from './Works'
 
 export default function Home() {
   return (
-    <div className=''>
+    <div>
        <ProjectIntro />
         <Content />
        <Works />
+      
        <Services />
-       <Contact />
+       
+      
+      <Contact />
+      
+       
 
     </div>
   )

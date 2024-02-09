@@ -51,20 +51,18 @@ function GridGalleryCard({ imageUrl, show }) {
 
   const getImg = (imageUrl) => {
     setTempImageUrl(imageUrl);
-    setModel(true);
+    setModel(!model);
   };
 
   useEffect(()=>{
-    if(model){
-      
-    }
+   
   },[model])
 
   return (
     <>
-    {model?<div className={`"w-full h-auto fixed top-0 left-0 flex flex-wrap justify-center align-middle bg-black bg-opacity-90 transition-opacity ease-in duration-500 visibible-[.6s] p-8 overflow-hidden z-[99] transform mb-10  "${model?"visible scale-100 opacity-100 ":"hidden opacity-0 transform scale-0 z-0"}`}>
-    <div className='fixed top-[10px] right-[10px] z-[99] h-auto w-auto p-6 m-4 text-white cursor-pointer ' 
-    onClick={()=>{setModel(false)}}
+    {model?<div className={`"w-full h-auto fixed top-0 left-0 flex flex-wrap justify-center align-middle bg-black bg-opacity-90 transition-opacity ease-in duration-500 visibible-[.6s] p-8 overflow-hidden z-[10] transform mb-10  "${model?"visible opacity-100 transition transform scale-100 duration-700 ":"hidden opacity-0 transform scale-0 z-0"}`}>
+    <div className='fixed top-[10px] right-[10px] z-[5] h-auto w-auto p-6 m-4 text-white cursor-pointer ' 
+    onClick={()=>{setModel(!model)}}
     >
     <FaXmark className='h-[2rem] w-[2rem]'/>
     </div>

@@ -5,7 +5,7 @@ import { getErrorMessage } from "../lib/utils";
 import ContactFormEmail from "../email/contact-form-emai";
 import React from "react";
 
-const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY);
+const resend = new Resend(process.env.REACT_APP_API_RESEND_KEY);
 
 
 
