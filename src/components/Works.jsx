@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 export default function Works() {
   return (
     <motion.section
-      className="h-screen py-6 sm:py-8 lg:py-12 mt-10"
+      className="h-screen py-6 sm:py-8 lg:py-12 mt-10 max-w-[1417px] m-auto"
       id="works"
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}

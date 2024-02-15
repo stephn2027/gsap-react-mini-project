@@ -13,6 +13,8 @@ import RandomShots from './components/RandomShots';
 import GroupShots from './components/GroupShots';
 import Services from './components/Services';
 
+
+
 const StyledMainWrapper = styled.div`
   position: relative;
 `;

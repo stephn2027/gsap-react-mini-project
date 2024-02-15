@@ -4,7 +4,10 @@
 
 
 
+
 @layer components{
+
+  
     .project__title {
         grid-area: project-title;
         text-align: right;

@@ -52,7 +52,7 @@ export default function AccordionServices({text}) {
         </h2>
         <TECollapse show={show} className="!mt-0 !shadow-none">
           <div className="px-2 py-2 leading-[1.8rem] h-full text-left my-5">
-            {text.map((details)=><li>{details}</li>)}
+            {text.map((details,id)=><li key={id}>{details}</li>)}
           </div>
         </TECollapse>
       </div>

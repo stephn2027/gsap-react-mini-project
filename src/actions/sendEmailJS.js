@@ -1,15 +1,16 @@
 import emailjs from '@emailjs/browser';
 
 const PUBLIC_KEY =  process.env.REACT_APP_API_EMAILJS_PUBLIC_KEY;
-const PRIVATE_KEY = process.env.REACT_APP_API_EMAILJS_PRIVATE_KEY;
+const TEMPLATE_ID = process.env.REACT_APP_API_EMAILJS_TEMPLATE_ID;
 const SERVICE_ID = process.env.REACT_APP_API_EMAILJS_SERVICE_ID; 
 
 
-export const sendEmail = (e,form) => {
-    e.preventDefault();
+export const sendEmailJS = (form) => {
+    
+    
 
     emailjs
-      .sendForm(SERVICE_ID, 'YOUR_TEMPLATE_ID', form.current, {
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
         publicKey: PUBLIC_KEY,
       })
       .then(

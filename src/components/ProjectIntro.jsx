@@ -16,30 +16,32 @@ const StyledProject = styled.section`
   background-color: #e1dfdd;
   z-index: -4;
   padding-bottom:2rem;
+  max-width: 1417px;
+  margin: 0 auto;
 `;
 const ProjectIntro = () => {
   return (
     <StyledProject 
       
     >
-      <motion.h2 className="project__title"
+      <motion.h2 className="project__title "
       initial={{x:100,opacity:0.7}}
       animate={{x:0, opacity:1}}
       transition={{ease:'linear', delay:0.2}}
       >
       
-        <span className="project__title--main">Deo Palculan</span>
-        <span className="project__title--sub">Photography</span>
+        <span className="project__title--main text-2xl md:text-7xl sm:text-3xl">Deo Palculan</span>
+        <span className="project__title--sub text-xl md:text-4xl sm:text-2xl">Photography</span>
       </motion.h2>
       <motion.div
-        className="project__img project__img--left"
+        className="project__img project__img--left h-[30vh] md:h-[60vh] sm:h-[40vh]"
         style={{ backgroundImage: `url(${backgroundOne})` }}
         initial={{x:-200,opacity:0.7}}
         animate={{x:0,opacity:1}}
         transition={{ease:'easeIn',delay:0.2}}
       ></motion.div>
       <motion.div
-        className="project__img project__img--right"
+        className="project__img project__img--right h-[40vh] md:h-[70vh] sm:h-[55vh]"
         style={{ backgroundImage: `url(${backgroundTwo})` }}
         initial={{x:200,opacity:0.7}}
       animate={{x:0, opacity:1}}

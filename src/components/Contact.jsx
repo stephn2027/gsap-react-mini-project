@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import SectionHeading from './SectionHeading';
-import { sendEmail } from '../actions/sendEmailJS';
 import toast from 'react-hot-toast';
 import { FaTiktok, FaFacebookF } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { sendEmailJS } from '../actions/sendEmailJS';
 
 export default function Contact() {
   const [inputValue, setInputValue] = useState({
@@ -22,15 +22,15 @@ export default function Contact() {
       className="h-screen py-6 sm:py-8 lg:py-12 md-5 "
       id="#contact"
     >
-       <div className='mt-20 pb-4'>
-       <SectionHeading>Contact Us</SectionHeading>
-       </div>
-     
+      <div className="mt-20 pb-4">
+        <SectionHeading>Contact Us</SectionHeading>
+      </div>
+
       <motion.div
-       initial={{ x: -300, opacity: 0.8 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ ease: 'easeInOut', duration: 0.3 }}
-      viewport={{ once: false }}
+        initial={{ x: -300, opacity: 0.8 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ ease: 'easeInOut', duration: 0.3 }}
+        viewport={{ once: false }}
         className="min-h-screen bg-cover"
         style={{
           backgroundImage:
@@ -77,11 +77,17 @@ export default function Contact() {
               </div>
 
               <motion.div
-               initial={{ x: 200, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ type:"spring", duration: 0.3 ,delay:0.4, stiffness:85}}
-      viewport={{ once: false }}
-               className="mt-8 lg:w-1/2 lg:mx-6">
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{
+                  type: 'spring',
+                  duration: 0.3,
+                  delay: 0.4,
+                  stiffness: 85,
+                }}
+                viewport={{ once: false }}
+                className="mt-8 lg:w-1/2 lg:mx-6"
+              >
                 <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white opacity-95 shadow-2xl rounded-xl lg:max-w-xl">
                   <h1 className="text-xl font-medium text-gray-700">
                     Get In Touch
@@ -94,12 +100,12 @@ export default function Contact() {
                   <form
                     ref={form}
                     className="mt-6"
-                    onSubmit={ () => {
+                    onSubmit={(e) => {
+                      e.preventDefault();
                      
-                        sendEmail(form);
-
-                      
+                      sendEmailJS(form);
                       toast.success('Email sent successfully!');
+                      
                       setInputValue({
                         senderMessage: '',
                         senderEmail: '',
@@ -115,7 +121,7 @@ export default function Contact() {
                         type="text"
                         placeholder="Your Name"
                         className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
-                        name="senderName"
+                        name="user_name"
                         maxLength={100}
                         value={inputValue.senderName}
                         onChange={(e) =>
@@ -135,7 +141,7 @@ export default function Contact() {
                         type="email"
                         placeholder="youremail@example.com"
                         className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  dark:text-gray-300 d focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
-                        name="senderName"
+                        name="user_email"
                         maxLength={500}
                         value={inputValue.senderEmail}
                         onChange={(e) =>
@@ -155,7 +161,7 @@ export default function Contact() {
                       <textarea
                         className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                         placeholder="Message"
-                        name="senderMessage"
+                        name="message"
                         maxLength={5000}
                         value={inputValue.senderMessage}
                         onChange={(e) =>

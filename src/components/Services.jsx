@@ -12,7 +12,7 @@ export default function Services() {
       transition={{ ease: 'easeInOut', duration: 0.5 }}
       viewport={{once:false}}
       id="services"
-      className="h-full py-6 sm:py-8 lg:py-12"
+      className="h-full py-6 sm:py-8 lg:py-12 max-w-[1417px] m-auto"
     >
      <div className='mt-20'>
      <SectionHeading>Services</SectionHeading>
@@ -34,7 +34,7 @@ export default function Services() {
       transition={{ ease: 'easeInOut', duration: 0.5 }}
       viewport={{once:false}}
         className="flex flex-wrap flex-row -mx-4 text-center mb-2">
-        {services.map((service)=><CardService serviceName={service.name} servicePrice={service.price} img={service.img} serviceText={service.text} />)}
+        {services.map((service,id)=><CardService key={id} serviceName={service.name} servicePrice={service.price} img={service.img} serviceText={service.text} />)}
           
         </motion.div>
       </div>

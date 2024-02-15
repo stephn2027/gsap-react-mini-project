@@ -65,7 +65,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
       <div className="header__container">
         <div className="header__inner">
         <a href="/" >
-        <img src={DpLogo} alt="logo" className='object-scale-down h-16' />
+        <img src={DpLogo} alt="logo" className='object-scale-down h-6 sm:h-10 md:h-16 ' />
         </a>
        
           
