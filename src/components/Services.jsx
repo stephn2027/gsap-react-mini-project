@@ -18,12 +18,12 @@ export default function Services() {
      <SectionHeading>Services</SectionHeading>
      </div>
     
-      <div className="container xl:max-w-6xl mx-auto px-4">
+      <div className="container xl:max-w-8xl mx-auto px-4">
         <header className="text-center mx-auto mb-12 lg:px-20">
 
           <p
           
-          className="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
+          className="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 max-w-3xl">
           Capture Moments, Create Memories: Unforgettable Photography Services Tailored Just for You! Discover our Picture-Perfect Packages at Prices as Captivating as Our Shots.
           </p>
         </header>

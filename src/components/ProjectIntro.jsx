@@ -16,7 +16,7 @@ const StyledProject = styled.section`
   background-color: #e1dfdd;
   z-index: -4;
   padding-bottom:2rem;
-  max-width: 1417px;
+  max-width: 1920px;
   margin: 0 auto;
 `;
 const ProjectIntro = () => {
@@ -24,7 +24,7 @@ const ProjectIntro = () => {
     <StyledProject 
       
     >
-      <motion.h2 className="project__title "
+      <motion.h2 className="project__title pr-16"
       initial={{x:100,opacity:0.7}}
       animate={{x:0, opacity:1}}
       transition={{ease:'linear', delay:0.2}}

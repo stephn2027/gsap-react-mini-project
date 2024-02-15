@@ -19,7 +19,7 @@ export default function Contact() {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 1.5 }}
       viewport={{ once: false }}
-      className="h-screen py-6 sm:py-8 lg:py-12 md-5 "
+      className="h-screen py-6 sm:py-8 lg:py-12 md-5 max-w-[1920px] m-auto"
       id="#contact"
     >
       <div className="mt-20 pb-4">

@@ -9,7 +9,7 @@ const StyledHeader = styled.header `
   background-blend-mode: overlay;
   
   .header__container {
-    max-width: 1417px;
+    max-width: 1920px;
     margin: 0 auto;
     .header__inner {
       height: 120px;
@@ -17,7 +17,7 @@ const StyledHeader = styled.header `
       align-items: center;
       justify-content: space-between;
       img {
-        width: 220px;
+        width: 120px;
         fill: #fff;
       }
     }
