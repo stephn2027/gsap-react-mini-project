@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeading from './SectionHeading';
 import portraitImage from '../images/DSC02889.jpg';
 import groupImage from '../images/DSC04215.jpg';
-import coupleImage from '../images/DSC08717.jpg';
+import coupleImage from '../images/coupletemple.jpeg';
 import randomImage from '../images/DSC09747.jpg';
 import { motion } from 'framer-motion';
 

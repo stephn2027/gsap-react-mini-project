@@ -15,7 +15,7 @@ const StyledContentSection = styled.section`
       font-size: clamp(1.5rem, 3.15vw, 4.25rem);
       line-height: 1;
       font-weight: 300;
-      width: 100%;
+      width: 80%;
       
     }
     .content__text--copy {

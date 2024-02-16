@@ -175,7 +175,7 @@ export default function MenuItems({
    
     <StyledProjectItem
       href={link}
-      className="project__item"
+      className="project__item max-w-[1920px]"
       data-color={bgcolor}
       data-image={src}
       onMouseEnter={handleMouseEnter}
@@ -183,7 +183,7 @@ export default function MenuItems({
       onMouseMove={handleMouseMove}
     >
        
-      <span className="project__item-text">
+      <span className="project__item-text sm:text-[2rem] md:text-[3rem] lg:text-[4rem]">
         <span className="word" ref={wordRef}>
           {name.split('').map((item, i) => {
             return (

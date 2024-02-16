@@ -12,15 +12,15 @@ export default function CardService({ serviceName, serviceText, img, servicePric
       animationName: 'fadeInUp',
     }}
   >
-    <div className="pt-8 pb-4 px-8 mb-8 bg-gray-50 bg-opacity-50 rounded-lg border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-      <div className="inline-block text-gray-900 mb-4">
-       <img src={img} alt="sample" />
+    <div className="mb-10 bg-yellow-950 bg-opacity-10 rounded-lg border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+      <div className="inline-block mb-3">
+       <img src={img} alt="sample pic" className='w-full h-full object-cover rounded-t-lg'  />
       </div>
-      <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
+      <h3 className="text-lg leading-normal mb-2 font-semibold text-gray-950">
         
         {serviceName}
       </h3>
-      <p className="text-gray-500">
+      <p className="text-pink-700 font-bold text-lg">
         {servicePrice}
         
       </p>

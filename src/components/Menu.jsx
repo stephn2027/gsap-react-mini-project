@@ -8,6 +8,7 @@ const StyledProjectsContainer = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+  
   .project__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +21,7 @@ const StyledProjectsContainer = styled.nav`
     pointer-events: none;
     position: absolute;
     width: 28vw;
-    height: 42vw;
+    height: 40vw;
     left: 50%;
     overflow: hidden;
     opacity: 0;

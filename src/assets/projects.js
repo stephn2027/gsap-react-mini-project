@@ -1,5 +1,5 @@
 import image1 from '../images/baghaei-photography-i7viNsvJa2c-unsplash.jpg';
-import image2 from '../images/ehsan-ahmadi-yh2caIMEk0M-unsplash.jpg';
+import image2 from '../images/portrait.jpeg';
 import image3 from '../images/DSC00620.jpg';
 import image4 from '../images/sobhan-joodi-Ts4d8AvN7K8-unsplash.jpg';
 

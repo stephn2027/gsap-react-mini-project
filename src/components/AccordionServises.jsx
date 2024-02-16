@@ -12,7 +12,7 @@ export default function AccordionServices({text}) {
   return (
     <>
       <div id="accordionExample">
-      <div className="rounded-b-lg border-t-0 border-neutral-200  dark:border-neutral-600 ">
+      <div className="rounded-lg border-t-3 border-neutral-200  dark:border-neutral-600 ">
         <h2 className="accordion-header mb-0" id="headingThree">
           <button
             className={`${
@@ -29,7 +29,7 @@ export default function AccordionServices({text}) {
             <span
               className={`${
                 show
-                  ? `rotate-[-180deg] -mr-1`
+                  ? `rotate-[-180deg] -mr-1 transition-all `
                   : `rotate-0 fill-[#1260ae] dark:fill-white`
               } ml-auto h-5 w-5 shrink-0 fill-[#336dec] transition-transform duration-200 ease-in-out motion-reduce:transition-none dark:fill-blue-300`}
             >
@@ -50,8 +50,8 @@ export default function AccordionServices({text}) {
             </span>
           </button>
         </h2>
-        <TECollapse show={show} className="!mt-0 !shadow-none">
-          <div className="px-2 py-2 leading-[1.8rem] h-full text-left my-5">
+        <TECollapse show={show} className="!mt-0 !shadow-none h-auto transition-all duration-500">
+          <div className="px-10 pb-8 leading-[1.8rem] h-auto text-left my-4 transition-all duration-500">
             {text.map((details,id)=><li key={id}>{details}</li>)}
           </div>
         </TECollapse>

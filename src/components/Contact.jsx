@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { FaTiktok, FaFacebookF } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { sendEmailJS } from '../actions/sendEmailJS';
+import Footer from './Footer';
 
 export default function Contact() {
   const [inputValue, setInputValue] = useState({
@@ -19,7 +20,7 @@ export default function Contact() {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 1.5 }}
       viewport={{ once: false }}
-      className="h-screen py-6 sm:py-8 lg:py-12 md-5 max-w-[1920px] m-auto"
+      className="h-auto pt-6 sm:pt-8 lg:pt-12 md-8 max-w-[1920px] m-auto"
       id="#contact"
     >
       <div className="mt-20 pb-4">
@@ -31,14 +32,14 @@ export default function Contact() {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ ease: 'easeInOut', duration: 0.3 }}
         viewport={{ once: false }}
-        className="min-h-screen bg-cover"
+        className="h-auto bg-cover"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1542083131-01357347695a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       >
-        <div className="flex flex-col min-h-screen bg-black/60">
-          <div className="container flex flex-col flex-1 px-6 py-12 mx-auto">
+        <div className="flex flex-col h-auto bg-black/60">
+          <div className="container flex flex-col flex-2 px-6 py-12 mx-auto">
             <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
               <div className="text-white lg:w-1/2 lg:mx-6">
                 <h1 className="text-2xl font-semibold capitalize lg:text-3xl">
@@ -183,9 +184,13 @@ export default function Contact() {
                   </form>
                 </div>
               </motion.div>
+              
             </div>
+            <Footer />
           </div>
+         
         </div>
+        
       </motion.div>
     </motion.section>
   );

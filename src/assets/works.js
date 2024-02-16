@@ -39,6 +39,14 @@ import r6 from '../images/etc/DSC09259.jpg';
 import r7 from '../images/etc/DSC09478.jpg';
 import r8 from '../images/etc/DSC09568.jpg';
 import r9 from '../images/etc/DSC09747.jpg';
+import r10 from '../images/etc/bird.jpeg';
+import r11 from '../images/etc/storelights.jpeg';
+import r12 from '../images/etc/falls.jpeg';
+import r13 from '../images/etc/falls2.jpeg';
+import r14 from '../images/etc/cart.jpeg';
+import r15 from '../images/etc/manong.jpeg';
+
+
 
 import g1 from '../images/group/DSC00642.jpg';
 import g2 from '../images/group/DSC01596.jpg'
@@ -106,6 +114,14 @@ export const randomShots = [
  r7,
  r8,
  r9,
+ r10,
+ r11,
+ r12,
+ r13,
+ r14,
+ r15,
+ 
+
  
 ];
 
