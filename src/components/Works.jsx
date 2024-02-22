@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeading from './SectionHeading';
 import portraitImage from '../images/DSC02889.jpg';
-import groupImage from '../images/DSC04215.jpg';
+import groupImage from '../images/groupImage.jpg';
 import coupleImage from '../images/coupletemple.jpeg';
 import randomImage from '../images/DSC09747.jpg';
 import { motion } from 'framer-motion';
@@ -14,7 +14,7 @@ export default function Works() {
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 0.5 }}
-      viewport={{once:false}}
+      viewport={{once:true}}
     >
       <SectionHeading>Works</SectionHeading>
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8 mt-[5rem]">
@@ -23,6 +23,7 @@ export default function Works() {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.1 }}
+            viewport={{once:true}}
             href="portraits"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
@@ -43,6 +44,7 @@ export default function Works() {
           initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.2 }}
+            viewport={{once:true}}
             href="groupshots"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
@@ -63,6 +65,7 @@ export default function Works() {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.3 }}
+            viewport={{once:true}}
             href="random"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
           >
@@ -84,6 +87,7 @@ export default function Works() {
           initial={{ y: 100, opacity: 0,}}
             whileInView={{ y: 0, opacity: 1, }}
             transition={{ ease: 'easeInOut', duration: 0.5, delay:0.4 }}
+            viewport={{once:true}}
             href="couples"
             className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >

@@ -1,8 +1,6 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactVisibilitySensor from 'react-visibility-sensor';
-import { FaXmark } from 'react-icons/fa6';
-import { useEffect } from 'react';
+import { FaTimes } from 'react-icons/fa';
 
 export default function GalleryViewer({ images }) {
   const [imagesShownArray, setImagesShownArray] = useState(
@@ -19,10 +17,7 @@ export default function GalleryViewer({ images }) {
   };
 
   return (
-    <div
-      className="columns-1 sm:columns-2 md:columns-3 gap-4 p-4 mt-20 max-w-[1920px] mx-auto
-    "
-    >
+    <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-4 mt-20">
       {images &&
         images.map((imageUrl, index) => (
           <ReactVisibilitySensor
@@ -31,10 +26,7 @@ export default function GalleryViewer({ images }) {
             offset={{ bottom: 80 }}
             onChange={(isVisible) => imageVisibleChange(index, isVisible)}
           >
-            <GridGalleryCard
-              imageUrl={imageUrl}
-              show={imagesShownArray[index]}
-            />
+            <GridGalleryCard imageUrl={imageUrl} show={imagesShownArray[index]} />
           </ReactVisibilitySensor>
         ))}
     </div>
@@ -45,56 +37,52 @@ function GridGalleryCard({ imageUrl, show }) {
   const [model, setModel] = useState(false);
   const [tempImageUrl, setTempImageUrl] = useState('');
 
-  const getImg = (imageUrl) => {
+  const toggleModel = (imageUrl) => {
     setTempImageUrl(imageUrl);
     setModel(!model);
   };
 
-  useEffect(() => {}, [model]);
+  useEffect(() => {
+    if (!model) {
+      // Reset image when modal is closed
+      setModel(false);
+    }
+  }, [model]);
 
   return (
     <>
-      {model ? (
-        <div
-          className={`"w-full h-auto fixed top-0 left-0 flex flex-wrap justify-center align-middle bg-black bg-opacity-90 transition-opacity duration-1000 visible p-8 overflow-hidden z-[10] mb-10"${
-            model
-              ? 'visible opacity-100 transition-opacity transform scale-100'
-              : 'hidden opacity-0 transform scale-0 z-0'
-          }`}
-        >
-          <div
-            className="fixed top-[10px] right-[10px] z-[5] h-auto w-auto p-6 m-4 text-white cursor-pointer "
-            onClick={() => {
-              setModel(!model);
-            }}
-          >
-            <FaXmark className="h-[2rem] w-[2rem]" />
-          </div>
-          <div>
-            <img
-              src={tempImageUrl}
-              alt=""
-              className="w-[100vw] max-w-full h-[100vh] h-max-full flex leading-0 box-border m-auto py-6 justify-center  align-stretch object-center object-contain mx-auto mt-[-2rem] transition-opacity"
-            />
+      {model && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
+          <div className="relative max-w-full mx-auto overflow-hidden rounded-lg shadow-xl">
+            <div
+              className="absolute top-0 right-0 my-6 md:my-10 lg:my-12 md:m-4 cursor-pointer"
+              onClick={() => setModel(false)}
+            >
+              <FaTimes className="text-white text-2xl md:text-4xl stroke-black stroke-[20px]" />
+            </div>
+            <div className='max-h-[95vh]'>
+            <img src={tempImageUrl} alt="" className="w-full h-[92vh] m-6 mx-auto md:max-h-[95vh] max-w-[92vw] object-contain" />
+            </div>
+           
           </div>
         </div>
-      ) : (
-        <div
-          onClick={() => getImg(imageUrl)}
+      )}
+      <div
+          onClick={() => toggleModel(imageUrl)}
           className={`relative transition-all duration-[0.8s] h-auto w-full rounded-xl transform mb-6 ${
-            show ? '' : 'translate-y-28 opacity-0'
+            show ? '' : 'translate-y-28 sm:translate-y-8 md:translate-y-0 opacity-0'
           } ${model ? 'overflow-hidden' : ''}`}
         >
           <div className="absolute inset-0 z-10 flex transition duration-300 ease-in hover:opacity-0">
             <div className="absolute inset-0 bg-black opacity-70 rounded-xl"></div>
           </div>
+          
           <img
             className="mx-auto object-center object-cover rounded-2xl cursor-pointer"
             src={imageUrl}
             alt=""
           />
         </div>
-      )}
     </>
   );
 }

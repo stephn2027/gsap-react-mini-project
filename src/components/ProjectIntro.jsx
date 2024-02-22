@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import backgroundOne from '../images/intro1.jpg';
-import backgroundTwo from '../images/intro2.jpg';
+import backgroundTwo from '../images/intro3.jpg';
 import {motion} from 'framer-motion';
 
 
@@ -28,6 +28,7 @@ const ProjectIntro = () => {
       initial={{x:100,opacity:0.7}}
       animate={{x:0, opacity:1}}
       transition={{ease:'linear', delay:0.2}}
+      viewport={{once:true}}
       >
       
         <span className="project__title--main text-2xl md:text-7xl sm:text-3xl">Deo Palculan</span>
@@ -39,6 +40,7 @@ const ProjectIntro = () => {
         initial={{x:-200,opacity:0.7}}
         animate={{x:0,opacity:1}}
         transition={{ease:'easeIn',delay:0.2}}
+        viewport={{once:true}}
       ></motion.div>
       <motion.div
         className="project__img project__img--right h-[40vh] md:h-[70vh] sm:h-[55vh]"
@@ -46,6 +48,7 @@ const ProjectIntro = () => {
         initial={{x:200,opacity:0.7}}
       animate={{x:0, opacity:1}}
       transition={{ease:'linear', delay:0.2}}
+      viewport={{once:true}}
       ></motion.div>
       
     </StyledProject>

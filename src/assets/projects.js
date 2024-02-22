@@ -1,7 +1,7 @@
-import image1 from '../images/baghaei-photography-i7viNsvJa2c-unsplash.jpg';
+import image1 from '../images/menuItemsImage.jpg';
 import image2 from '../images/portrait.jpeg';
 import image3 from '../images/DSC00620.jpg';
-import image4 from '../images/sobhan-joodi-Ts4d8AvN7K8-unsplash.jpg';
+import image4 from '../images/menuItemImage4.jpg';
 
  const projects = [
     { id: "01", color: "#b5b5b2", image: image1, name: "Home" , link:'/' },

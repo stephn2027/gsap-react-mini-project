@@ -19,7 +19,7 @@ export default function Contact() {
       initial={{ x: 200, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 1.5 }}
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       className="h-auto pt-6 sm:pt-8 lg:pt-12 md-8 max-w-[1920px] m-auto"
       id="#contact"
     >
@@ -31,7 +31,7 @@ export default function Contact() {
         initial={{ x: -300, opacity: 0.8 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ ease: 'easeInOut', duration: 0.3 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="h-auto bg-cover"
         style={{
           backgroundImage:
@@ -86,7 +86,7 @@ export default function Contact() {
                   delay: 0.4,
                   stiffness: 85,
                 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="mt-8 lg:w-1/2 lg:mx-6"
               >
                 <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white opacity-95 shadow-2xl rounded-xl lg:max-w-xl">

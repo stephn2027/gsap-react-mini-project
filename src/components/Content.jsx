@@ -36,6 +36,7 @@ const Content = () => {
        initial={{ y:200 ,opacity: 0 }}
       whileInView={{ y:0,opacity: 1 }}
       transition={{ ease:'easeInOut',duration: 1 }}
+      viewport={{once:true}}
       >
         <p className="content__text--heading text-sm max-w-6xl text-start">
           Welcome to our photography page, where we invite you to explore a
