@@ -16,6 +16,14 @@ export default function GalleryViewer({ images }) {
     }
   };
 
+  useEffect(() => {
+    // Preload images
+    images.forEach((imageUrl, index) => {
+      const img = new Image();
+      img.src = imageUrl;
+    });
+  }, [images]);
+
   return (
     <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-4 mt-20">
       {images &&
