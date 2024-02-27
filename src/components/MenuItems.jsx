@@ -178,9 +178,12 @@ export default function MenuItems({
       className="project__item max-w-[1920px]"
       data-color={bgcolor}
       data-image={src}
+      onTouchStart={handleMouseEnter}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={(event) => handleMouseLeave(event)}
+      onTouchEnd={event=>handleMouseLeave(event)}
       onMouseMove={handleMouseMove}
+      onTouchMove={handleMouseMove}
     >
        
       <span className="project__item-text sm:text-[2rem] md:text-[3rem] lg:text-[4rem]">

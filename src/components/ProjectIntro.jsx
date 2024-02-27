@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styled from 'styled-components';
-import backgroundOne from '../images/intro1.jpg';
-import backgroundTwo from '../images/intro3.jpg';
+import backgroundOne from '../images/intro1.webp';
+import backgroundTwo from '../images/intro3.webp';
 import {motion} from 'framer-motion';
 
 
@@ -20,6 +20,15 @@ const StyledProject = styled.section`
   margin: 0 auto;
 `;
 const ProjectIntro = () => {
+
+  useEffect(() => {
+    // Preload images
+    const images = [backgroundOne, backgroundTwo];
+    images.forEach((image) => {
+      new Image().src = image;
+    });
+  }, []);
+
   return (
     <StyledProject 
       
@@ -41,6 +50,7 @@ const ProjectIntro = () => {
         animate={{x:0,opacity:1}}
         transition={{ease:'easeIn',delay:0.2}}
         viewport={{once:true}}
+        
       ></motion.div>
       <motion.div
         className="project__img project__img--right h-[40vh] md:h-[70vh] sm:h-[55vh]"

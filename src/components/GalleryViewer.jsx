@@ -61,7 +61,7 @@ function GridGalleryCard({ imageUrl, show }) {
               <FaTimes className="text-white text-2xl md:text-4xl stroke-black stroke-[20px]" />
             </div>
             <div className='max-h-[95vh]'>
-            <img src={tempImageUrl} alt="" className="w-full h-[92vh] m-6 mx-auto md:max-h-[95vh] max-w-[92vw] object-contain" />
+            <img src={tempImageUrl} alt="" className="w-full h-[92vh] m-6 mx-auto md:max-h-[95vh] max-w-[92vw] object-contain" loading='lazy'/>
             </div>
            
           </div>
@@ -81,6 +81,7 @@ function GridGalleryCard({ imageUrl, show }) {
             className="mx-auto object-center object-cover rounded-2xl cursor-pointer"
             src={imageUrl}
             alt=""
+            loading='lazy'
           />
         </div>
     </>
