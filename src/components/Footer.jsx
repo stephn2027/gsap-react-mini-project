@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row sm:flex-col items-end justify-between align-bottom">
           
           <div className="flex mt-4 m-auto">
-            <a href="#" className="mr-4 hover:text-gray-400">Home</a>
-            <a href="#" className="mr-4 hover:text-gray-400">Portfolio</a>
-            <a href="#" className="mr-4 hover:text-gray-400">Services</a>
-            <a href="#" className="mr-4 hover:text-gray-400">Contact</a>
+            <a href="/" className="mr-4 hover:text-gray-400">Home</a>
+            <a href="works" className="mr-4 hover:text-gray-400">Portfolio</a>
+            <a href="services" className="mr-4 hover:text-gray-400">Services</a>
+            <a href="contact" className="mr-4 hover:text-gray-400">Contact</a>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-4">
