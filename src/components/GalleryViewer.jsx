@@ -82,7 +82,7 @@ function GridGalleryCard({ imageUrl, show }) {
           } ${model ? 'overflow-hidden' : ''}`}
         >
           <div className="absolute inset-0 z-10 flex transition duration-300 ease-in hover:opacity-0">
-            <div className="absolute inset-0 bg-black opacity-70 rounded-xl"></div>
+            <div className="md:block hidden absolute inset-0 bg-black opacity-70 rounded-xl"></div>
           </div>
           
           <img
@@ -95,3 +95,4 @@ function GridGalleryCard({ imageUrl, show }) {
     </>
   );
 }
+
