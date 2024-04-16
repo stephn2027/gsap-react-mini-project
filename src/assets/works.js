@@ -18,11 +18,9 @@ import c2 from '../images/couple/DSC08539.jpg';
 import c3 from '../images/couple/DSC07997.jpg';
 import c4 from '../images/couple/DSC08717.jpg';
 import c5 from '../images/couple/DSC08132.jpg';
-import c6 from '../images/couple/DSC08223.jpg';
 import c7 from '../images/couple/DSC08233.jpg';
 import c8 from '../images/couple/DSC08236.jpg';
 import c9 from '../images/couple/DSC08358.jpg';
-import c10 from '../images/couple/DSC08627.jpg';
 import c11 from '../images/couple/DSC08632-Edit-2.jpg';
 import c12 from '../images/couple/DSC08712.jpg';
 import c13 from '../images/couple/DSC08283.jpg';
@@ -120,11 +118,9 @@ export const couples = [
   c3,
   c4,
   c5,
-  c6,
   c7,
   c8,
   c9,
-  c10,
   c11,
   c12,
   c13,
